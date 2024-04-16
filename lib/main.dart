@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 onChanged: (text) {
                   setState(() {
-                    _displayText =BengaliLanguageUtils.transliterate(text);
+                    _displayText = BengaliLanguageUtils.transliterate(text);
                   });
                 },
               ),
