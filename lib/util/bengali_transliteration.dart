@@ -1,6 +1,8 @@
 import 'dart:convert';
 
-class BengaliLanguageUtils {
+import 'package:banglish_notify/util/lang_utils.dart';
+
+class BengaliLanguageUtils extends LanguageUtils {
   static final Map<String, String> composites = {
     "ক্ষ": "kkh",
     "ঞ্চ": "NC",
@@ -17,8 +19,8 @@ class BengaliLanguageUtils {
   };
 
   static final Map<String, String> vowels = {
-    "আ": "a",
-    "অ": "o",
+    "আ": "aa",
+    "অ": "a",
     "ই": "i",
     "ঈ": "ii",
     "উ": "u",
@@ -31,23 +33,23 @@ class BengaliLanguageUtils {
   };
 
   static final Map<String, String> vowelsAndHasants = {
-    "আ": "a",
-    "অ": "o",
+    "আ": "aa",
+    "অ": "a",
     "ই": "i",
-    "ঈ": "i",
+    "ঈ": "ii",
     "উ": "u",
-    "ঊ": "u",
+    "ঊ": "uu",
     "ঋ": "ri",
     "এ": "e",
     "ঐ": "oi",
     "ও": "o",
     "ঔ": "ou",
-    "া": "a",
+    "া": "aa",
     "ি": "i",
-    "ী": "i",
+    "ী": "ii",
     "ু": "u",
-    "ূ": "u",
-    "ৃ": "ri",
+    "ূ": "uu",
+    "ৃ": "r",
     "ে": "e",
     "ো": "o",
     "ৈ": "oi",
@@ -56,16 +58,15 @@ class BengaliLanguageUtils {
     "ং": "ng",
     "ঃ": "h",
     "।": ".",
-    ",": ",",
   };
 
   static final Map<String, String> letters = {
-    "আ": "a",
-    "অ": "o",
+    "আ": "aa",
+    "অ": "a",
     "ই": "i",
-    "ঈ": "i",
+    "ঈ": "ii",
     "উ": "u",
-    "ঊ": "u",
+    "ঊ": "uu",
     "ঋ": "ri",
     "এ": "e",
     "ঐ": "oi",
@@ -96,7 +97,7 @@ class BengaliLanguageUtils {
     "ব": "b",
     "ভ": "bh",
     "ম": "m",
-    "য": "y",
+    "য": "J",
     "র": "r",
     "ল": "l",
     "শ": "sh",
@@ -117,11 +118,11 @@ class BengaliLanguageUtils {
     "৭": "7",
     "৮": "8",
     "৯": "9",
-    "া": "a",
+    "া": "aa",
     "ি": "i",
-    "ী": "i",
+    "ী": "ii",
     "ু": "u",
-    "ূ": "u",
+    "ূ": "uu",
     "ৃ": "r",
     "ে": "e",
     "ো": "o",
@@ -132,7 +133,6 @@ class BengaliLanguageUtils {
     "ঃ": "h",
     "ঁ": "nN",
     "।": ".",
-    ",": ",",
   };
 
   static final RegExp bengaliRegex = RegExp(
@@ -296,5 +296,4 @@ class BengaliLanguageUtils {
     return sb.toString();
   }
 }
-
 

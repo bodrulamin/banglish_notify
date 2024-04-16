@@ -1,4 +1,5 @@
 import 'package:banglish_notify/util/bengali_transliteration.dart';
+import 'package:banglish_notify/util/lang_utils.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -46,7 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 onChanged: (text) {
                   setState(() {
-                    _displayText = BengaliLanguageUtils.transliterate(text);
+                    String msg = LanguageUtils.transliterate(text);
+                    _displayText = BengaliLanguageUtils.transliterate(msg);
                   });
                 },
               ),
